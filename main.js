@@ -29,6 +29,10 @@ function next_senario(){
 	$('#scenario-'+sen_counter).attr("hidden",false);
 	counter=1;
 	$('#r-'+counter+'-'+sen_counter).attr("hidden",false);
+    if(sen_counter==5)
+        {
+            window.location.href="chp1-thankyou.html"
+        }
 }
 
 function get_bubble(n){

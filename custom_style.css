@@ -91,6 +91,10 @@ a{
     font-family: 'Fjalla One';
 }
 
+a.thankYou:hover{
+    text-decoration: none;
+}
+
 .tipImage{
     height: 350px;
     width: 500px
