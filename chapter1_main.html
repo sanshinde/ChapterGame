@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+	<link href="https://fonts.googleapis.com/css?family=Fjalla+One|Roboto+Condensed" rel="stylesheet">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+    
+
+<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous" />
+	<link type="text/css" rel="stylesheet" href="custom_style.css" />
+<!-- Latest compiled and minified JavaScript -->
+	<script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js">
+        </script>
+</head>
+
+<body>
+
+	<div class="main_content">
+		<div id="scenario-1" hidden=true>
+			<div id="sen_resp1">
+			<div class="row">
+				<div style="margin-top:20px;"align="center" class="col-xs-12">
+				<img src="images/Scenario1.jpg" height="280px" width="280px"/>
+					<h1>You’ve just now told your parents that you want to live on your own. <br> They say no b/c it’s not safe and you’re not ready. How do you respond?</h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-3">
+					<img onclick="slide_left()" class="left-nav" id="right" src="images/left.png" alt="left-icon"/>
+				</div>
+				<div class="col-sm-6">
+					<div class="option-box" style="margin-bottom:30px" id="optbx">
+						<div align="center" class="reactions">
+							<h2 id="r-1-1" hidden=true>
+                                <div class="optiontxt">OPTION A</div><br>React negatively and yell, “What do you mean I’m not ready? I could do this tomorrow!”<br><button style="margin-top: 20px" onclick="get_bubble(1);" class="btn btn-success btn-lg">I'd do this!</button></h2>
+							<h2 id="r-2-1" hidden=true>
+                                <div class="optiontxt">OPTION B</div><br>I know that you don’t support me on this but it’s what I want so I’m going to begin working on it, on my own<br><button style="margin-top: 20px" align="center" onclick="get_bubble(2);" class="btn btn-success btn-lg">I'd do this!</button></h2>
+							<h2 id="r-3-1" hidden=true>
+                                <div class="optiontxt">OPTION C</div><br>My friend Robert moved out and lives on his own and he used Agency Acme, so I want us to meet with them and see what my options are.<br><button style="margin-top: 20px;" onclick="get_bubble(3);" class="btn btn-success btn-lg">I'd do this!</button></h2>
+						</div>
+				</div>
+				</div>
+				<div class="col-sm-3">
+					<img onclick="slide_right()" class="right-nav" id="left" src="images/right.png" alt="right-icon"/>
+				</div>
+			</div>
+			</div>
+			<div align="center" id="bubble-1" hidden=true>
+                    <div align="center" class="circle">
+                    <div class="restitle">Result</div>
+					<h4 id="b-1-1" hidden=true>Recognize that you are yelling because you are upset and frustrated. Your parents feel hurt and it takes them three weeks to come around and talk about it again. Instead of yelling, you could say, ““I wish you would respect and support my decision since I am adult.  Will you please hear me about because I have spent a lot of time thinking through this.” </h4>
+					<h4 id="b-2-1" hidden=true>You could start this process on your own. Know that this process can be overwhelming, lonely, and frustrating at times. Think about who else is in your life who might have experience with moving who might be able to help you.</h4>
+					<h4 id="b-3-1" hidden=true>Agencies can provide many great resources and supports. Agency Acme might be a great fit for you, but there could be other agencies in your area. Keeping your parents involved is a great way to build in support!</h4>
+                    <button onclick="next_senario();"type="button" class="btn btn-primary btn-lg">Next</button>
+				    </div>
+                 <div class="tipdiv"><img src="images/Tip%201.png" class="tipImage" align="right" alt="question1 tip"></div>
+            </div>
+		</div>
+		
+		<div id="scenario-2" hidden=true>
+			<div id="sen_resp2">
+			<div class="row">
+				<div style="margin-top:20px;"align="center" class="col-xs-12">
+				<img src="images/Scenario2.jpg" height="280px" width="280px" alt="question2"/>
+					<h1>You’ve told your friend Shoshanna that you think you’re ready to live on your own. <br>Shosh asks you, “How are you going to pay for rent?”  You reply:</h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-3">
+					<img onclick="slide_left()" class="left-nav" id="right" src="images/left.png" alt="left-icon"/>
+				</div>
+				<div class="col-sm-6">
+					<div class="option-box" style="margin-bottom:30px;">
+						<div align="center" class="reactions">
+							<h2 id="r-1-2" hidden=true><div class="optiontxt">OPTION A</div><br>I’ll start looking around to see if there’s any jobs.<br><button style="margin-top:30px;" align="center" onclick="get_bubble(1);" class="btn btn-success btn-lg">I'd do this!</button></h2>
+							<h2 id="r-2-2" hidden=true><div class="optiontxt">OPTION B</div><br>I’ll find a place I like and then figure out the money.<br><button style="margin-top:30px;" align="center" onclick="get_bubble(2);" class="btn btn-success btn-lg">I'd do this!</button></h2>
+							<h2 id="r-3-2" hidden=true><div class="optiontxt">OPTION C</div><br>I’ll see what apartment rent costs around me and see if I can do it on my own or if I will need a roommate.<br><button style="margin-top:30px;" align="center" onclick="get_bubble(3);" class="btn btn-success btn-lg">I'd do this!</button></h2>
+						</div>
+				</div>
+				</div>
+				<div class="col-sm-3">
+					<img onclick="slide_right()" class="right-nav" id="left" src="images/right.png" alt="right-icon"/>
+				</div>
+			</div>
+			</div>
+			<div align="center" id="bubble-2" hidden=true>
+				<div align="center" class="circle">
+                    <div class="restitle">Result</div>
+					<h4 id="b-1-2" hidden=true>A job can be a great first step to save money before you move out, but know that it can also be a long process.</h4>
+					<h4 id="b-2-2" hidden=true>Remember that many apartments won’t let you sign a lease until you can pay a security deposit and first month’s rent. You might want to think about how you can save up money before searching for a place.</h4>
+					<h4 id="b-3-2" hidden=true>Thinking through what an apartment costs and your personal budget is a great idea before looking for a place to live. Doing research on places near you is a great idea and will help you learn about costs.</h4>
+                <button onclick="next_senario();"type="button" class="btn btn-primary btn-lg">Next</button>
+				</div>
+			<div class="tipdiv"><img src="images/Tip%202.png" class="tipImage" align="right" alt="question2 tip"></div>
+            </div>
+		</div>
+		
+		<div id="scenario-3" hidden=true>
+			<div id="sen_resp3">
+			<div class="row">
+				<div style="margin-top:20px;"align="center" class="col-xs-12">
+				<img src="images/Scenario3.jpg" height="280px" width="280px" alt="question3"/>
+					<h1>You tell your Direct Support Professional that you’d like to live on your own. <br>They say that you need to keep working on your independent living skills before you are ready to even think about living on your own.  What do you do?</h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-3">
+					<img onclick="slide_left()" class="left-nav" id="right" src="images/left.png" alt="left-icon"/>
+				</div>
+				<div class="col-sm-6">
+					<div class="option-box" style="margin-bottom:30px;">
+						<div align="center" class="reactions">
+							<h2 id="r-1-3" hidden=true><div class="optiontxt">OPTION A</div><br>You ask your DSP to look at your Individual Service Plan with you so that your goals can be changed.<br><button style="margin-top:30px;" align="center" onclick="get_bubble(1);" class="btn btn-success btn-lg">I'd do this!</button></h2>
+							<h2 id="r-2-3" hidden=true><div class="optiontxt">OPTION B</div><br>You yell “I can’t believe you don’t think I’m ready!  Why aren’t you supporting me?  It’s your job to help me!”<br><button style="margin-top:30px;" align="center" onclick="get_bubble(2);" class="btn btn-success btn-lg">I'd do this!</button></h2>
+							<h2 id="r-3-3" hidden=true><div class="optiontxt">OPTION C</div><br>You keep working on the goals already on your ISP with your DSP.<br><button style="margin-top:30px;" align="center" onclick="get_bubble(3);" class="btn btn-success btn-lg">I'd do this!</button></h2>
+						</div>
+				</div>
+				</div>
+				<div class="col-sm-3">
+					<img onclick="slide_right()" class="right-nav" id="left" src="images/right.png" alt="right-icon"/>
+				</div>
+			</div>
+			</div>
+			<div align="center" id="bubble-3" hidden=true>
+                
+				<div align="center" class="circle">
+                    <div class="restitle">Result</div>
+					<h4 id="b-1-3" hidden=true>Changing your goals and breaking them down into smaller steps could help you reach your goal of living on your own.</h4>
+					<h4 id="b-2-3" hidden=true>Recognize that you are yelling because you are frustrated and upset. How else could you express that to your DSP? Maybe you could say, “I have thought about this a lot and this is what I really want. Please help me figure out how to help me make it happen.”</h4>
+					<h4 id="b-3-3" hidden=true>By working on your current goals at the pace on your ISP it will take you an extra year or two to gain your DSP’s support to move out on your own.</h4>
+				<button onclick="next_senario();"type="button" class="btn btn-primary btn-lg">Next</button>
+                </div>
+                <div class="tipdiv"><img src="images/Tip%203.png" class="tipImage" align="right" alt="question3 tip"></div>
+			</div>
+		</div>
+
+		<div id="scenario-4" hidden=true>
+			<div id="sen_resp4">
+			<div class="row">
+				<div style="margin-top:20px;"align="center" class="col-xs-12">
+				<img src="images/Scenario4.jpg" height="280px" width="280px" alt="question4"/>
+					<h1>You tell a sibling that you’re tired of living with your family and ready to live on your own.<br>They are worried about you being lonely.  You reply:</h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-3">
+					<img onclick="slide_left()" class="left-nav" id="right" src="images/left.png" alt="left-icon"/>
+				</div>
+				<div class="col-sm-6">
+					<div class="option-box" style="margin-bottom:30px;">
+						<div align="center" class="reactions">
+							<h2 id="r-1-4" hidden=true><div class="optiontxt">OPTION A</div><br>I’ll think about what’s nearby in the community so that I can stay connected with others.<br><button style="margin-top:30px;" align="center" onclick="get_bubble(1);" class="btn btn-success btn-lg">I'd do this!</button></h2>
+							<h2 id="r-2-4" hidden=true><div class="optiontxt">OPTION B</div><br>I’ll think about a roommate or a pet.<br><button style="margin-top:30px;" align="center" onclick="get_bubble(2);" class="btn btn-success btn-lg">I'd do this!</button></h2>
+							<h2 id="r-3-4" hidden=true><div class="optiontxt">OPTION C</div><br>Won’t you all still be coming to visit me after I move out?<br><button style="margin-top:30px;" align="center" onclick="get_bubble(3);" class="btn btn-success btn-lg">I'd do this!</button></h2>
+						</div>
+				</div>
+				</div>
+				<div class="col-sm-3">
+					<img onclick="slide_right()" class="right-nav" id="left" src="images/right.png" alt="right-icon"/>
+				</div>
+			</div>
+			</div>
+			<div align="center" id="bubble-4" hidden=true>
+               
+				<div align="center" class="circle">
+                    <div class="restitle">Result</div>
+					<h4 id="b-1-4" hidden=true>It is okay if you do feel lonely. Everyone feels lonely from time to time, but remember just because you moved out doesn’t mean you can’t make new connections.</h4>
+					<h4 id="b-2-4" hidden=true>This can be a great option to beat loneliness, and a roommate can also help you save money!</h4>
+					<h4 id="b-3-4" hidden=true>It’s okay to be scared of feeling lonely, before you move talk with your family about how often you’ll be able to see each other.</h4>
+				<button onclick="next_senario();"type="button" class="btn btn-primary btn-lg">Next</button>
+                </div>
+                <div class="tipdiv"><img src="images/Tip%204.png" class="tipImage" align="right" alt="question4 tip"></div>
+			</div>
+		</div>
+		
+		<div id="scenario-5" hidden=true>
+			<div id="sen_resp5">
+			<div class="row">
+				<div style="margin-top:20px;"align="center" class="col-xs-12">
+				<img src="images/Scenario5.jpg" height="280px" width="280px" alt="question2"/>
+					<h1>You tell a cousin about your plan to move out on your own and they are so excited to hear this!<br>You respond by:</h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-3">
+					<img onclick="slide_left()" class="left-nav" id="right" src="images/left.png" alt="left-icon"/>
+				</div>
+				<div class="col-sm-6">
+					<div class="option-box" style="margin-bottom:30px;">
+						<div align="center" class="reactions">
+							<h2 id="r-1-5" hidden=true><div class="optiontxt">OPTION A</div><br>You say, “I’m excited, but my mom is trying to control everything!”<br><button style="margin-top:30px;" align="center" onclick="get_bubble(1);" class="btn btn-success btn-lg">I'd do this!</button></h2>
+							<h2 id="r-2-5" hidden=true><div class="optiontxt">OPTION B</div><br>You ask, “What was your favorite part about moving out?”<br><button style="margin-top:30px;" align="center" onclick="get_bubble(2);" class="btn btn-success btn-lg">I'd do this!</button></h2>
+							<h2 id="r-3-5" hidden=true><div class="optiontxt">OPTION C</div><br>You ask, “What advice do you have for me?”<br><button style="margin-top:30px;" align="center" onclick="get_bubble(3);" class="btn btn-success btn-lg">I'd do this!</button></h2>
+						</div>
+				</div>
+				</div>
+				<div class="col-sm-3">
+					<img onclick="slide_right()" class="right-nav" id="left" src="images/right.png" alt="right-icon"/>
+				</div>
+			</div>
+			</div>
+			<div align="center" id="bubble-5" hidden=true>
+                
+				<div align="center" class="circle">
+                    <div class="restitle">Result</div>
+					<h4 id="b-1-5" hidden=true>It’s okay to vent to people because we all need that sometimes. Consider that your cousin is being supportive and you could ask them for advice as well.</h4>
+					<h4 id="b-2-5" hidden=true>Learning what other people enjoyed the most is a great way to stay positive and motivated.</h4>
+					<h4 id="b-3-5" hidden=true>Asking for advice from people who have already moved out is a great way to learn about your new independence.</h4>
+				    <button onclick="next_senario();"type="button" class="btn btn-primary btn-lg">Next</button>
+                </div>
+                <div class="tipdiv"><img src="images/Tip%205.png" class="tipImage" align="right" alt="question5 tip"></div>
+			</div>
+		</div>
+			</div>
+
+
+
+<script type="text/javascript" src="main.js"></script> 
+<!--<script src="jquery-1.9.0.min.js"></script> -->
+</body>
+</html>

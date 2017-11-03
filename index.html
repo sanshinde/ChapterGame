@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link type="text/css" rel="stylesheet" href="custom_style.css" />
+	<link href="//fonts.googleapis.com/css?family=Fjalla+One|Roboto+Condensed" rel="stylesheet">
+    <title>Welcome to Chapter Game</title>
+
+</head>
+
+<body>
+	<div class="welcome">
+		<h1 id="1">WELCOME</h1>
+	</div>
+	
+	<div class="chapters" id="chapters" hidden>
+		<a href="chp1-intro.html">CHAPTER 1</a>
+	</div>
+
+	<script>
+		window.onload = setTimeout(function () {
+			document.getElementById("1").innerHTML = "Select a Chapter to Start";			
+		}, 3000);
+		
+		window.onload = setTimeout(function (){
+			document.getElementById("chapters").removeAttribute("hidden");
+		}, 6000);
+
+    </script>
+</body>
+</html>
+

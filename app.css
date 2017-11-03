@@ -1,0 +1,172 @@
+html{
+	box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+	margin: 0px;
+	padding: 0px;
+	background-color: #0e1219;
+	text-align: center;
+}
+img {
+	border: none;
+}
+
+
+
+.panelHolder{
+	height: 100%;
+	width: 100%;
+	display: block;
+	position: absolute;
+	padding-top: 0;
+}
+.content {
+    background-color: #ddd;
+    padding: 10px;
+    height: 100px; 
+    text-align:center;
+}
+#panel_spent{
+	background: #0e1219;
+	background: -moz-radial-gradient(center, ellipse cover,  #2d3032 0%, #0e1219 65%); /* FF3.6+ */
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#2d3032), color-stop(65%,#0e1219)); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover,  #2d3032 0%,#0e1219 65%); /* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(center, ellipse cover,  #2d3032 0%,#0e1219 65%); /* Opera 12+ */
+	background: -ms-radial-gradient(center, ellipse cover,  #2d3032 0%,#0e1219 65%); /* IE10+ */
+	background: radial-gradient(ellipse at center,  #2d3032 0%,#0e1219 65%); /* W3C */
+}
+
+#nfc-copy{
+	background: url(../images/copy_nfc.jpg) no-repeat top center transparent;
+
+}
+#nfc-top{
+	background: url(../images/items_1.jpg) no-repeat top center transparent;
+
+}
+#nfc-bottom{
+	background: url(../images/items_2.jpg) no-repeat top center transparent;
+
+}
+#spent-copy{
+	background: url(images/intro.png) no-repeat top center transparent;
+
+}
+#spent-copy img{
+	display: none;
+}
+
+/*IE8*/
+.backgroundsize #nfc-copy,
+.backgroundsize #nfc-top,
+.backgroundsize #nfc-bottom,
+.backgroundsize #spent-copy{
+	background-size: contain;
+}
+
+.no-backgroundsize .panelHolder{
+	width: 1030px;
+	position: relative;
+	margin: 0 auto;
+}
+.no-backgroundsize .nfc_image,
+.no-backgroundsize #spent-copy{
+	height: 264px;
+}
+
+.no-backgroundsize #panel_nfc{
+	width: 513px;
+	float: left;
+}
+.no-backgroundsize #panel_spent{
+	width: 513px;
+	float: right;
+}
+.no-backgroundsize #spent-copy{
+	margin-top: 264px;
+}
+
+
+/* (landscape) ----------- */
+@media only screen and (orientation : landscape) {
+	#panel_nfc{
+		width: 50%;
+		max-width: 512px;
+		display: inline-block;
+	}
+	#panel_spent{
+		width: 48%;
+		max-width: 512px;
+		display: inline-block;
+		vertical-align: top;
+	}
+	
+	#nfc-top{
+		display:block;
+	}
+	#nfc-top.hide{
+		display: none;	
+	}
+
+	#panel_nfc div,
+	#spent-copy{
+		padding-top: 51.461988%;
+		height: auto;
+		width: 100%;
+		display:block;
+		position: relative;
+	}
+
+}
+
+/* (portrait) ----------- */
+@media only screen and (orientation : portrait) {
+	#panel_nfc{
+		height: 66%;
+		display: block;
+	}
+	#panel_spent{
+		height: 33%;
+		display: block;
+	}
+	
+	#nfc-top{
+		display:none;
+	}
+	
+	#panel_nfc div{
+		height: 50%;
+		width: auto;
+	}
+	#spent-copy{
+		margin-top: 0;
+		height: 100%;
+		width: auto;
+	}
+		
+				
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min-resolution: 192dpi){
+	#nfc-copy{
+		background: url(../images/copy_nfc@2x.jpg) no-repeat top center transparent;
+		background-size: contain;
+	}
+	#nfc-top{
+		background: url(../images/items_1@2x.jpg) no-repeat top center transparent;
+		background-size: contain;
+	}
+	#nfc-bottom{
+		background: url(../images/items_2@2x.jpg) no-repeat top center transparent;
+		background-size: contain;
+	}
+	#spent-copy{
+		background: url(images/intro.png) no-repeat top center transparent;
+		background-size: contain;
+	}
+}
