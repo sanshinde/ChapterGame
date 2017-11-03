@@ -4,6 +4,19 @@ var count_right=0;
 var count_left=0;
 var counter=1;
 var sen_counter=1;
+var key=0;
+
+function myFunction(event) {
+    key = event.which;
+    if(key==37)
+        {
+            slide_left();
+        }
+    if(key==39)
+        {
+            slide_right();
+        }
+}
 
 $( document ).ready(function() {	
 	$('#scenario-'+sen_counter).attr("hidden",false);
