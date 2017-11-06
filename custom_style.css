@@ -1,10 +1,10 @@
 body{
 background-color: #151a1e;
 color: #dbd1b7;
-font-family: "alternate-gothic-no-3-d",Helvetica,Arial,sans-serif;
+font-family: 'Roboto Condensed', sans-serif;
 overflow: hidden;
 height: 100%;
-    width: 100%;
+width: 100%;
 }
 
 #left{
@@ -52,11 +52,20 @@ background-image:url("images/left.png");
 	margin-bottom:50px;
 	height:100px;
 	width:100%;
+    
 	animation-name: grow;
 	animation-duration: 3s;
 	animation-iteration-count: 2;
 	animation-fill-mode:forwards;
-    font-smoothing: antialiased;
+    
+    -webkit-animation-name: grow;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-iteration-count: 2;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-font-smoothing: antialiased;
+    
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 400;
 }
 
 @-webkit-keyframes grow {
@@ -65,9 +74,27 @@ background-image:url("images/left.png");
 	}
 
 	to {
-		font-size:30px;
+		font-size:35px;
 	}
 }
+
+
+
+/*@keyframes introEnd
+0% {
+    -webkit-transform: perspective(2000px) translate3d(0, -50%, -100px);
+    -moz-transform: perspective(2000px) translate3d(0, -50%, -100px);
+    transform: perspective(2000px) translate3d(0, -50%, -100px);
+    opacity: 0;
+}
+    100% {
+    -webkit-transform: perspective(2000px) translate3d(0, -50%, 0);
+    -moz-transform: perspective(2000px) translate3d(0, -50%, 0);
+    transform: perspective(2000px) translate3d(0, -50%, 0);
+    opacity: 1;
+}*/
+
+    
 
 @keyframes grow {
     from {
@@ -75,7 +102,7 @@ background-image:url("images/left.png");
     }
 
 	to {
-        font-size:30px;
+        font-size:35px;
     }
 }
 
@@ -83,16 +110,13 @@ background-image:url("images/left.png");
 	font-size:40px;
 	text-align:center;
     font-family: 'Fjalla One';
+    font-weight: bold;
 }
 
 a{
 	color:#ce4415;
 	text-decoration: none;
-    font-family: 'Fjalla One';
-}
-
-a.thankYou:hover{
-    text-decoration: none;
+    /*font-family: 'Fjalla One';*/
 }
 
 .tipImage{
@@ -110,19 +134,18 @@ a.thankYou:hover{
     font-size: 36px; 
     padding: 0px 0 10px;
     border-bottom: 1px dotted #fff;
-            border-bottom-width: 1px;
-            border-bottom-style: dotted;
-            border-bottom-color: rgb(255, 255, 255);
+    border-bottom-width: 1px;
+    border-bottom-style: dotted;
+    border-bottom-color: rgb(255, 255, 255);
     color: #fff;
     display: inline-block;
     font-family: 'Fjalla One', sans-serif;
-    /*font-size: 28px;*/
     letter-spacing: 0.05em;
     line-height: 1;
     font-weight: bold;
-   /* padding: 30px 0 2px;*/
     text-transform: uppercase;
 }
+
 
 h4{
     font-family: 'times';
@@ -134,9 +157,12 @@ h2{
     font-size: 20px;
 }
 
+/* p{
+    font-family: 'Roboto Condensed', sans-serif; 
+}*/
 h1{
-    font-family: 'Roboto Condensed', sans-serif;
-    font-size: 35px;
+    font-family: 'Roboto Condensed', sans-serif !important; 
+    font-size: 1.5em;
 }
 
 .optiontxt{
