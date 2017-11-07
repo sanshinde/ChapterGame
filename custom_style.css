@@ -19,9 +19,23 @@ margin-top: 150px;}
 background-image:url("images/left.png");
 }
 
+.row{
+    display: flex;
+    flex-direction: row;
+
+}
+.row > div {
+        flex: 1 1 auto;
+        width: 40px; /* To make the transition work nicely. (Transitions to/from
+                        "width:auto" are buggy in Gecko and Webkit, at least.
+                        See http://bugzil.la/731886 for more info.) */
+        transition: width 0.7s ease-out;
+    }
+
+
 .option-box {
   width:100%;
-  height: 300px;
+  height: 100%;
   margin-top: 10px;
   background-color:#e6dfcd;
   color:#4e4c45;
@@ -76,25 +90,7 @@ background-image:url("images/left.png");
 	to {
 		font-size:35px;
 	}
-}
-
-
-
-/*@keyframes introEnd
-0% {
-    -webkit-transform: perspective(2000px) translate3d(0, -50%, -100px);
-    -moz-transform: perspective(2000px) translate3d(0, -50%, -100px);
-    transform: perspective(2000px) translate3d(0, -50%, -100px);
-    opacity: 0;
-}
-    100% {
-    -webkit-transform: perspective(2000px) translate3d(0, -50%, 0);
-    -moz-transform: perspective(2000px) translate3d(0, -50%, 0);
-    transform: perspective(2000px) translate3d(0, -50%, 0);
-    opacity: 1;
-}*/
-
-    
+}    
 
 @keyframes grow {
     from {
@@ -157,9 +153,7 @@ h2{
     font-size: 20px;
 }
 
-/* p{
-    font-family: 'Roboto Condensed', sans-serif; 
-}*/
+
 h1{
     font-family: 'Roboto Condensed', sans-serif !important; 
     font-size: 1.5em;
@@ -170,4 +164,14 @@ h1{
     font-weight: bold;
     font-size: 25px;
     font-family: 'Roboto Condensed', sans-serif;
+    text-align: center;
+}
+
+@media only screen and (max-width: 500px) {
+    body{
+        overflow:scroll;
+        align-content: center;
+    }  
+    
+          
 }
